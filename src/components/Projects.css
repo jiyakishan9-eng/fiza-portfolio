@@ -1,0 +1,150 @@
+.projects-section {
+	padding: 88px 32px 100px;
+	background: #0d1922;
+}
+
+.projects-inner {
+	width: min(1060px, 100%);
+	margin: 0 auto;
+}
+
+.projects-heading {
+	max-width: 560px;
+	margin-bottom: 30px;
+}
+
+.projects-eyebrow {
+	margin: 0 0 14px;
+	color: #00d2ff;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.projects-heading h2,
+.contact-copy h2 {
+	margin: 0;
+	color: #f4f9fc;
+	font-size: 34px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.projects-intro {
+	margin: 14px 0 0;
+	color: #a4b4bf;
+	font-size: 16px;
+	line-height: 1.7;
+}
+
+.project-card {
+	display: grid;
+	min-height: 190px;
+	align-items: center;
+	grid-template-columns: auto minmax(0, 1fr) auto;
+	gap: 25px;
+	padding: 30px;
+	border: 1px solid #203c49;
+	border-radius: 8px;
+	background: linear-gradient(115deg, #10232d, #101f2a 60%, #0e1a23);
+	transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.project-card:hover {
+	transform: translateY(-3px);
+	border-color: #00aeca;
+	box-shadow: 0 14px 32px rgba(0, 0, 0, 0.24), 0 0 22px rgba(0, 210, 255, 0.1);
+}
+
+.project-index {
+	color: #00d2ff;
+	font-family: ui-monospace, Consolas, monospace;
+	font-size: 13px;
+}
+
+.project-card-copy {
+	max-width: 620px;
+}
+
+.project-status {
+	margin: 0 0 8px;
+	color: #00d2ff;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.project-card h3 {
+	margin: 0;
+	color: #edf6fa;
+	font-size: 20px;
+	line-height: 1.35;
+}
+
+.project-card-copy > p:last-child {
+	margin: 9px 0 0;
+	color: #a4b4bf;
+	font-size: 14px;
+	line-height: 1.65;
+}
+
+.project-mark {
+	display: grid;
+	width: 42px;
+	height: 42px;
+	place-items: center;
+	border: 1px solid #294754;
+	border-radius: 50%;
+	color: #00d2ff;
+	font-size: 21px;
+	transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease;
+}
+
+.project-card:hover .project-mark {
+	border-color: #00d2ff;
+	color: #06141b;
+	background: #00d2ff;
+}
+
+@media (max-width: 700px) {
+	.projects-section {
+		padding: 72px 24px 80px;
+	}
+
+	.projects-inner {
+		width: min(100%, 520px);
+	}
+
+	.projects-heading h2,
+	.contact-copy h2 {
+		font-size: 30px;
+	}
+
+	.project-card {
+		min-height: 170px;
+		gap: 16px;
+		padding: 22px;
+	}
+}
+
+@media (max-width: 420px) {
+	.projects-section {
+		padding: 60px 20px 68px;
+	}
+
+	.project-card {
+		grid-template-columns: auto minmax(0, 1fr);
+		gap: 12px;
+		padding: 19px;
+	}
+
+	.project-mark {
+		display: none;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.project-card,
+	.project-mark {
+		transition: none;
+	}
+}

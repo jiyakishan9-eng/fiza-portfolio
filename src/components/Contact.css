@@ -1,0 +1,94 @@
+.contact-section {
+	padding: 78px 32px;
+	background: #091118;
+}
+
+.contact-inner {
+	display: flex;
+	width: min(1060px, 100%);
+	align-items: center;
+	justify-content: space-between;
+	gap: 40px;
+	margin: 0 auto;
+	padding: 34px 38px;
+	border: 1px solid #203c49;
+	border-radius: 8px;
+	background: linear-gradient(110deg, #10232d, #0d1922 72%);
+}
+
+.contact-copy {
+	max-width: 590px;
+}
+
+.contact-eyebrow {
+	margin: 0 0 14px;
+	color: #00d2ff;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.contact-copy > p:last-child {
+	margin: 14px 0 0;
+	color: #a4b4bf;
+	font-size: 16px;
+	line-height: 1.7;
+}
+
+.contact-button {
+	display: inline-flex;
+	min-height: 48px;
+	flex: 0 0 auto;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+	padding: 0 18px;
+	border: 1px solid #00d2ff;
+	border-radius: 7px;
+	color: #06141b;
+	background: #00d2ff;
+	box-shadow: 0 0 22px rgba(0, 210, 255, 0.13);
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	transition: border-color 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
+}
+
+.contact-button:hover {
+	border-color: #72e7ff;
+	background: #72e7ff;
+	box-shadow: 0 0 28px rgba(0, 210, 255, 0.25);
+}
+
+.contact-button:focus-visible,
+.footer-inner a:focus-visible {
+	outline: 3px solid #00d2ff;
+	outline-offset: 4px;
+}
+
+@media (max-width: 700px) {
+	.contact-section {
+		padding: 64px 24px;
+	}
+
+	.contact-inner {
+		width: min(100%, 520px);
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 24px;
+		padding: 28px;
+	}
+}
+
+@media (max-width: 420px) {
+	.contact-section {
+		padding: 52px 20px;
+	}
+
+	.contact-inner {
+		padding: 22px;
+	}
+
+	.contact-button {
+		width: 100%;
+	}
+}

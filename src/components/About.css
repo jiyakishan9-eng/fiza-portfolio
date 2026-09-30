@@ -1,0 +1,68 @@
+.about-section {
+  padding: 100px 32px;
+  background: #0d1922;
+}
+
+.about-layout {
+  display: grid;
+  width: min(1060px, 100%);
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: start;
+  gap: clamp(40px, 8vw, 112px);
+  margin: 0 auto;
+}
+
+.about-eyebrow,
+.skills-eyebrow {
+  margin: 0 0 14px;
+  color: #00d2ff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.about-heading h2,
+.skills-heading h2 {
+  margin: 0;
+  color: #f4f9fc;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.about-copy {
+  padding-top: 5px;
+}
+
+.about-copy p {
+  margin: 0;
+  color: #a4b4bf;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.about-copy p + p {
+  margin-top: 17px;
+}
+
+@media (max-width: 700px) {
+  .about-section {
+    padding: 72px 24px;
+  }
+
+  .about-layout {
+    width: min(100%, 520px);
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .about-heading h2,
+  .skills-heading h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 420px) {
+  .about-section {
+    padding: 60px 20px;
+  }
+}
