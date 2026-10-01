@@ -20,7 +20,7 @@
 }
 
 .hero-greeting {
-  margin: 0 0 12px;
+  margin: 0 0 6px;
   color: #00d2ff;
   font-size: 16px;
   font-weight: 600;
@@ -29,23 +29,25 @@
 .hero-copy h1 {
   margin: 0;
   color: #f4f9fc;
-  font-size: 60px;
+  font-size: 44px;
   font-weight: 700;
   letter-spacing: 0;
-  line-height: 1.08;
+  line-height: 1.1;
   text-align: left;
 }
 
 .hero-role {
-  margin: 14px 0 0;
+  margin: 8px 0 0;
   color: #00d2ff;
-  font-size: 23px;
+  font-size: 24px;
   font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.2;
 }
 
 .hero-intro {
   max-width: 440px;
-  margin: 20px 0 0;
+  margin: 14px 0 0;
   color: #a4b4bf;
   font-size: 17px;
   line-height: 1.75;
@@ -330,7 +332,11 @@
   }
 
   .hero-copy h1 {
-    font-size: 48px;
+    font-size: 40px;
+  }
+
+  .hero-role {
+    font-size: 22px;
   }
 
   .hero-visual {
@@ -365,11 +371,15 @@
   }
 
   .hero-copy h1 {
-    font-size: 44px;
+    font-size: 36px;
   }
 
   .hero-role {
-    font-size: 21px;
+    font-size: 20px;
+  }
+
+  .hero-greeting {
+    font-size: 16px;
   }
 
   .hero-intro {
@@ -392,7 +402,15 @@
   }
 
   .hero-copy h1 {
-    font-size: 38px;
+    font-size: 32px;
+  }
+
+  .hero-role {
+    font-size: 18px;
+  }
+
+  .hero-greeting {
+    font-size: 15px;
   }
 
   .hero-actions {

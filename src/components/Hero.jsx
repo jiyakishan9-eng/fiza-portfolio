@@ -9,15 +9,6 @@ function SocialIcon({ type }) {
     )
   }
 
-  if (type === 'linkedin') {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M5 9v10M5 5.5v.1M10 19v-6a4 4 0 0 1 8 0v6m-8-6V9" />
-        <circle cx="5" cy="5" r="1" />
-      </svg>
-    )
-  }
-
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <rect x="3.5" y="5" width="17" height="14" rx="2" />
@@ -73,7 +64,7 @@ function Hero() {
     <section className="hero-section" id="home" aria-labelledby="hero-title">
       <div className="hero-layout">
         <div className="hero-copy">
-          <p className="hero-greeting">Hello, I&apos;m</p>
+          <p className="hero-greeting">Hi, I&apos;m</p>
           <h1 id="hero-title">Fiza Kaleem</h1>
           <p className="hero-role">Web Developer</p>
           <p className="hero-intro">
@@ -93,10 +84,6 @@ function Hero() {
             <a href="https://github.com/your-username" aria-label="GitHub profile placeholder">
               <SocialIcon type="github" />
               <span>GitHub</span>
-            </a>
-            <a href="https://www.linkedin.com/in/your-username" aria-label="LinkedIn profile placeholder">
-              <SocialIcon type="linkedin" />
-              <span>LinkedIn</span>
             </a>
             <a href="mailto:your.email@example.com" aria-label="Email placeholder">
               <SocialIcon type="email" />

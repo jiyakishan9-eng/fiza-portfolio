@@ -16,11 +16,32 @@
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   flex: 0 0 auto;
-  color: #f4f9fc;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: 800;
   text-decoration: none;
+}
+
+.brand-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: #00d2ff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.brand-first {
+  color: #f4f9fc;
+}
+
+.brand-last {
+  color: #00d2ff;
 }
 
 .primary-navigation {
@@ -152,11 +173,17 @@
 @media (max-width: 420px) {
   .navbar {
     width: calc(100% - 32px);
-    gap: 10px;
+    gap: 8px;
   }
 
   .brand {
-    font-size: 16px;
+    gap: 2px;
+    font-size: 15px;
+  }
+
+  .brand-icon {
+    width: 14px;
+    height: 14px;
   }
 
   .button-cv {

@@ -20,7 +20,11 @@ function Navbar() {
     <header className="site-header">
       <div className="navbar">
         <a className="brand" href="#home" onClick={closeMenu}>
-          Fiza Kaleem
+          <svg className="brand-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m8 5-5 7 5 7M16 5l5 7-5 7M14 4l-4 16" />
+          </svg>
+          <span className="brand-first">Fiza</span>
+          <span className="brand-last">Kaleem</span>
         </a>
 
         <button
