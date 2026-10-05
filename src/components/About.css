@@ -30,7 +30,61 @@
 }
 
 .about-copy {
-  padding-top: 5px;
+  position: relative;
+  overflow: hidden;
+  padding: 28px;
+  border: 1px solid rgba(0, 210, 255, 0.2);
+  border-radius: 10px;
+  background: linear-gradient(140deg, rgba(17, 38, 49, 0.86), rgba(12, 27, 36, 0.8));
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.2), 0 0 28px rgba(0, 210, 255, 0.06), inset 0 1px rgba(211, 248, 255, 0.06);
+  backdrop-filter: blur(14px);
+}
+
+.about-copy::before {
+  position: absolute;
+  top: 0;
+  left: 28px;
+  width: 96px;
+  height: 1px;
+  background: linear-gradient(90deg, #00d2ff, transparent);
+  content: '';
+}
+
+.about-signal {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.about-signal-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  place-items: center;
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  border-radius: 8px;
+  color: #70e8ff;
+  background: rgba(0, 210, 255, 0.09);
+  box-shadow: 0 0 20px rgba(0, 210, 255, 0.12);
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.about-signal-rule {
+  width: 24px;
+  height: 1px;
+  background: rgba(0, 210, 255, 0.42);
+}
+
+.about-signal-label {
+  color: #74dff2;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: uppercase;
 }
 
 .about-copy p {
@@ -53,6 +107,10 @@
     width: min(100%, 520px);
     grid-template-columns: minmax(0, 1fr);
     gap: 24px;
+  }
+
+  .about-copy {
+    padding: 22px;
   }
 
   .about-heading h2,

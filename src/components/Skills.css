@@ -28,21 +28,22 @@
 .skill-card {
   display: flex;
   min-width: 0;
-  min-height: 104px;
-  align-items: center;
-  gap: 15px;
-  padding: 18px;
-  border: 1px solid #203440;
+  min-height: 116px;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 17px;
+  border: 1px solid rgba(57, 95, 111, 0.58);
   border-radius: 8px;
-  background: #101f2a;
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
-  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+  background: linear-gradient(145deg, rgba(17, 36, 46, 0.92), rgba(13, 27, 36, 0.88));
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.14), inset 0 1px rgba(218, 248, 255, 0.04);
+  transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
 }
 
 .skill-card:hover {
-  transform: translateY(-3px);
-  border-color: #00aeca;
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25), 0 0 20px rgba(0, 210, 255, 0.1);
+  transform: translateY(-4px) scale(1.01);
+  border-color: rgba(0, 210, 255, 0.75);
+  background: linear-gradient(145deg, rgba(19, 43, 55, 0.98), rgba(13, 29, 39, 0.94));
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25), 0 0 24px rgba(0, 210, 255, 0.13), inset 0 1px rgba(218, 248, 255, 0.08);
 }
 
 .skill-mark {
@@ -52,9 +53,17 @@
   flex: 0 0 46px;
   place-items: center;
   border-radius: 11px;
-  font-family: ui-monospace, Consolas, monospace;
-  font-size: 17px;
-  font-weight: 700;
+  transition: box-shadow 200ms ease, transform 200ms ease;
+}
+
+.skill-mark svg {
+  width: 27px;
+  height: 27px;
+}
+
+.skill-card:hover .skill-mark {
+  transform: scale(1.06);
+  box-shadow: 0 0 20px currentColor;
 }
 
 .skill-mark-html {
@@ -70,21 +79,21 @@
 .skill-mark-javascript {
   color: #f5d76e;
   background: rgba(245, 215, 110, 0.12);
-  font-size: 14px;
 }
 
 .skill-mark-react {
   color: #59ddf7;
   background: rgba(0, 210, 255, 0.12);
-  font-family: sans-serif;
-  font-size: 25px;
+}
+
+.skill-mark-tailwind {
+  color: #62d8e8;
+  background: rgba(98, 216, 232, 0.12);
 }
 
 .skill-mark-git {
   color: #ff9478;
   background: rgba(255, 115, 82, 0.12);
-  font-family: sans-serif;
-  font-size: 25px;
 }
 
 .skill-mark-supabase {
@@ -96,32 +105,51 @@
 
 .skill-details {
   display: grid;
+  flex: 1;
   min-width: 0;
-  gap: 5px;
+  gap: 13px;
+  padding-top: 3px;
+}
+
+.skill-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
 }
 
 .skill-name {
   color: #e9f3f7;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
 }
 
-.skill-description {
-  color: #91a5b1;
+.skill-level {
+  flex: 0 0 auto;
+  color: #a4b4bf;
   font-size: 12px;
-  line-height: 1.4;
+  font-variant-numeric: tabular-nums;
 }
 
-.skill-status {
-  align-self: flex-start;
-  margin-left: auto;
-  padding: 5px 7px;
-  border-radius: 6px;
-  color: #79e3ae;
-  background: rgba(84, 214, 151, 0.12);
-  font-size: 10px;
-  font-weight: 600;
-  white-space: nowrap;
+.skill-progress {
+  display: block;
+  height: 6px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: #203440;
+}
+
+.skill-progress-value {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #00aeca, #63e5ff);
+  box-shadow: 0 0 12px rgba(0, 210, 255, 0.3);
+  transition: filter 200ms ease;
+}
+
+.skill-card:hover .skill-progress-value {
+  filter: brightness(1.25);
 }
 
 @media (max-width: 800px) {
@@ -151,13 +179,18 @@
   }
 
   .skill-card {
-    min-height: 88px;
+    min-height: 94px;
     padding: 14px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .skill-card {
+    transition: none;
+  }
+
+  .skill-mark,
+  .skill-progress-value {
     transition: none;
   }
 }

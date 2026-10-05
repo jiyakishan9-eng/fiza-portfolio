@@ -1,14 +1,22 @@
 import './About.css'
+import useScrollReveal from '../useScrollReveal.js'
 
 function About() {
+  const revealRef = useScrollReveal()
+
   return (
-    <section className="about-section" id="about" aria-labelledby="about-title">
+    <section ref={revealRef} className="about-section scroll-reveal" id="about" aria-labelledby="about-title">
       <div className="about-layout">
         <div className="about-heading">
           <p className="about-eyebrow">A little about me</p>
           <h2 id="about-title">Building for people, one thoughtful detail at a time.</h2>
         </div>
         <div className="about-copy">
+          <div className="about-signal" aria-hidden="true">
+            <span className="about-signal-icon">&lt;/&gt;</span>
+            <span className="about-signal-rule" />
+            <span className="about-signal-label">Frontend development</span>
+          </div>
           <p>
             I&apos;m Fiza Kaleem, a web developer who enjoys turning ideas into
             clear, approachable experiences on the web. I focus on interfaces

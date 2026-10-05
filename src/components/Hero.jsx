@@ -1,4 +1,6 @@
 import './Hero.css'
+import profileImage from '../assets/profile-cutout.png'
+import useScrollReveal from '../useScrollReveal.js'
 
 function SocialIcon({ type }) {
   if (type === 'github') {
@@ -19,49 +21,36 @@ function SocialIcon({ type }) {
 
 function HeroVisual() {
   return (
-    <div className="hero-visual" aria-hidden="true">
-      <div className="visual-orbit" />
-      <div className="code-window">
-        <div className="window-bar">
-          <div className="window-dots">
-            <span />
-            <span />
-            <span />
-          </div>
-          <span className="window-file">fiza.js</span>
-          <span className="window-menu">•••</span>
+    <div className="hero-visual">
+      <div className="portrait-glow">
+        <div className="portrait-geometry" aria-hidden="true">
+          <span className="portrait-shape portrait-diamond portrait-diamond-outer" />
+          <span className="portrait-shape portrait-diamond portrait-diamond-inner" />
+          <span className="portrait-shape portrait-rectangle portrait-rectangle-back" />
+          <span className="portrait-shape portrait-rectangle portrait-rectangle-front" />
+          <span className="portrait-trace portrait-trace-top" />
+          <span className="portrait-trace portrait-trace-bottom" />
         </div>
-        <div className="editor">
-          <div className="line-number">01</div>
-          <div className="code-line"><span className="code-purple">const</span> <span className="code-blue">developer</span> = {'{'}</div>
-          <div className="line-number">02</div>
-          <div className="code-line code-indent"><span className="code-blue">name</span>: <span className="code-green">'Fiza Kaleem'</span>,</div>
-          <div className="line-number">03</div>
-          <div className="code-line code-indent"><span className="code-blue">focus</span>: <span className="code-green">'Web development'</span>,</div>
-          <div className="line-number">04</div>
-          <div className="code-line code-indent"><span className="code-blue">approach</span>: <span className="code-green">'Thoughtful &amp; responsive'</span>,</div>
-          <div className="line-number">05</div>
-          <div className="code-line">{'}'}</div>
-          <div className="line-number">06</div>
-          <div className="code-line code-comment">// Making the web feel a little better.</div>
-        </div>
-        <div className="window-status">
-          <span><i /> Ready to build</span>
-          <span>JavaScript</span>
+        <span className="portrait-tech-mark portrait-tech-mark-code" aria-hidden="true">&lt;/&gt;</span>
+        <span className="portrait-tech-mark portrait-tech-mark-braces" aria-hidden="true">{'{ }'}</span>
+        <span className="portrait-tech-mark portrait-tech-mark-star" aria-hidden="true">&#10022;</span>
+        <div className="portrait-frame">
+          <img
+            className="portrait-image"
+            src={profileImage}
+            alt="Portrait of Fiza Kaleem"
+          />
         </div>
       </div>
-      <div className="visual-label">
-        <span className="label-check">&#10003;</span>
-        <span>Thoughtful by design</span>
-      </div>
-      <div className="visual-sparkle">&#10022;</div>
     </div>
   )
 }
 
 function Hero() {
+  const revealRef = useScrollReveal()
+
   return (
-    <section className="hero-section" id="home" aria-labelledby="hero-title">
+    <section ref={revealRef} className="hero-section scroll-reveal" id="home" aria-labelledby="hero-title">
       <div className="hero-layout">
         <div className="hero-copy">
           <p className="hero-greeting">Hi, I&apos;m</p>
